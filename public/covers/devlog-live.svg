@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#0b1120" />
+  <rect x="60" y="80" width="280" height="180" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="5" />
+  <polygon points="190,150 260,190 190,230" fill="#38bdf8" />
+  <rect x="130" y="300" width="140" height="20" rx="10" fill="#a855f7" />
+  <text x="120" y="340" fill="#a855f7" font-size="32" font-family="monospace">LIVE</text>
+</svg>

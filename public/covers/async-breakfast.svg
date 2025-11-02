@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#020617" />
+  <g stroke="#38bdf8" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M80 200 C140 140 260 260 320 200" />
+    <path d="M80 240 C140 180 260 300 320 240" />
+  </g>
+  <text x="60" y="340" fill="#e0f2fe" font-size="38" font-family="monospace">async()</text>
+</svg>
