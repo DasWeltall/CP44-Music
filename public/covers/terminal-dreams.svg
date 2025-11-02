@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#020617" />
+  <g stroke="#38bdf8" stroke-width="4">
+    <path d="M40 120 L200 200 L40 280" fill="none" />
+    <circle cx="300" cy="200" r="70" fill="none" />
+  </g>
+  <text x="40" y="360" fill="#a855f7" font-size="42" font-family="monospace">Terminal</text>
+</svg>

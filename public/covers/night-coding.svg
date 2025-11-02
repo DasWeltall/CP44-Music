@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad)" />
+  <text x="50" y="210" fill="#e2e8f0" font-size="48" font-family="monospace">Night</text>
+  <text x="50" y="270" fill="#bae6fd" font-size="42" font-family="monospace">Coding</text>
+</svg>

@@ -1,0 +1,27 @@
+import type { Config } from 'tailwindcss';
+
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace'
+        ]
+      },
+      colors: {
+        cyber: '#38bdf8',
+        neon: '#a855f7'
+      }
+    }
+  },
+  plugins: []
+} satisfies Config;
