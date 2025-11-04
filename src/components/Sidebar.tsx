@@ -34,7 +34,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ current, onNavigate, playlists
               className={clsx(
                 'flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-medium transition-all',
                 active
-                  ? 'bg-slate-800 text-cyber'
+                  ? 'bg-slate-800 text-brand'
                   : 'text-slate-400 hover:bg-slate-900 hover:text-slate-100'
               )}
             >
@@ -51,7 +51,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ current, onNavigate, playlists
             <li key={playlist.id}>
               <button
                 type="button"
-                className="w-full text-left transition-colors hover:text-cyber"
+                className="w-full text-left transition-colors hover:text-brand"
                 onClick={() => onNavigate(`playlist:${playlist.id}`)}
               >
                 {playlist.name}

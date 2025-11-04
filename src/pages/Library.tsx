@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { AdjustmentsHorizontalIcon, PencilIcon, PlayIcon, TrashIcon } from '../components/icons';
+import { AdjustmentsHorizontalIcon, PlayIcon } from '../components/icons';
 import { MediaCard } from '../components/MediaCard';
 import type { MediaItem } from '../data/media';
 import { categories, mediaItems, playlists, type Playlist } from '../data/media';
@@ -35,18 +35,15 @@ export const Library: React.FC<LibraryProps> = ({ onSelect, onPlayCollection, fo
             const items = resolveItems(playlist);
             return (
               <div key={playlist.id} className="flex flex-col gap-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+                <div className="grid grid-cols-2 gap-3">
+                  {items.slice(0, 4).map((item) => (
+                    <img key={item.id} src={item.cover} alt={item.title} className="rounded-lg" />
+                  ))}
+                </div>
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-100">{playlist.name}</h3>
                     <p className="text-xs text-slate-400">{playlist.description}</p>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-500">
-                    <button type="button" className="rounded-full border border-slate-700 p-2 hover:text-cyber">
-                      <PencilIcon className="h-4 w-4" />
-                    </button>
-                    <button type="button" className="rounded-full border border-slate-700 p-2 hover:text-neon">
-                      <TrashIcon className="h-4 w-4" />
-                    </button>
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-slate-500">
@@ -58,11 +55,6 @@ export const Library: React.FC<LibraryProps> = ({ onSelect, onPlayCollection, fo
                   >
                     <PlayIcon className="h-4 w-4" /> Play all
                   </button>
-                </div>
-                <div className="grid gap-3 md:grid-cols-2">
-                  {items.slice(0, 4).map((item) => (
-                    <MediaCard key={item.id} item={item} variant="list" onSelect={onSelect} showActions={false} />
-                  ))}
                 </div>
               </div>
             );

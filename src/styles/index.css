@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  @apply text-cyber hover:text-neon transition-colors;
+  @apply text-brand hover:text-accent transition-colors;
 }
 
 ::-webkit-scrollbar {

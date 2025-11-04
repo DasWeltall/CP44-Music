@@ -42,7 +42,7 @@ export const StickyPlayer: React.FC = () => {
 
   const waveformGradient = useMemo(
     () => ({
-      background: `linear-gradient(90deg, rgba(56,189,248,0.8) ${percent}%, rgba(148,163,184,0.2) ${percent}%)`
+      background: `linear-gradient(90deg, #00f5d4 ${percent}%, rgba(148,163,184,0.2) ${percent}%)`
     }),
     [percent]
   );
@@ -65,22 +65,22 @@ export const StickyPlayer: React.FC = () => {
           </div>
           <div className="flex flex-1 flex-col gap-3">
             <div className="flex items-center justify-center gap-4">
-              <button type="button" className="rounded-lg p-2 text-slate-400 transition hover:text-cyber" onClick={playPrev}>
+              <button type="button" className="rounded-lg p-2 text-slate-400 transition hover:text-brand" onClick={playPrev}>
                 <BackwardIcon className="h-5 w-5" />
               </button>
               <button
                 type="button"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-cyber/80 text-slate-900 shadow-lg shadow-cyber/30 transition hover:bg-cyber"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/80 text-slate-900 shadow-lg shadow-brand/30 transition hover:bg-brand"
                 onClick={togglePlay}
               >
                 {isPlaying ? <PauseIcon className="h-6 w-6" /> : <PlayIcon className="h-6 w-6" />}
               </button>
-              <button type="button" className="rounded-lg p-2 text-slate-400 transition hover:text-cyber" onClick={playNext}>
+              <button type="button" className="rounded-lg p-2 text-slate-400 transition hover:text-brand" onClick={playNext}>
                 <ForwardIcon className="h-5 w-5" />
               </button>
               <button
                 type="button"
-                className={clsx('rounded-lg p-2 transition', repeat ? 'text-neon' : 'text-slate-500 hover:text-neon')}
+                className={clsx('rounded-lg p-2 transition', repeat ? 'text-accent' : 'text-slate-500 hover:text-accent')}
                 onClick={() => setRepeat(!repeat)}
               >
                 <ArrowPathIcon className="h-5 w-5" />
@@ -108,18 +108,18 @@ export const StickyPlayer: React.FC = () => {
               step={0.01}
               value={volume}
               onChange={(event) => setVolume(Number(event.target.value))}
-              className="h-1 w-28 cursor-pointer appearance-none rounded-full bg-slate-700 accent-cyber"
+              className="range-slider h-4 w-28"
             />
             <button
               type="button"
-              className="rounded-xl border border-slate-800 px-3 py-1 text-xs text-slate-400 transition hover:text-cyber"
+              className="rounded-xl border border-slate-800 px-3 py-1 text-xs text-slate-400 transition hover:text-brand"
               onClick={() => setExpanded((prev) => !prev)}
             >
               {isExpanded ? 'Mini' : 'Expand'}
             </button>
           </div>
         </div>
-        <div className={clsx('grid flex-1 gap-4 border-t border-slate-900 px-8 py-4', current.type === 'video' ? 'grid-cols-[2fr_1fr]' : 'grid-cols-3')}>
+        <div className={clsx('prose prose-sm grid flex-1 gap-4 border-t border-slate-900 px-8 py-4', current.type === 'video' ? 'grid-cols-[2fr_1fr]' : 'grid-cols-3')}>
           <div className="space-y-4">
             {current.type === 'video' ? (
               <VideoPlayer
@@ -164,7 +164,7 @@ export const StickyPlayer: React.FC = () => {
                     </div>
                     <button
                       type="button"
-                      className="rounded-full border border-slate-700 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-slate-400 transition hover:text-cyber"
+                      className="rounded-full border border-slate-700 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-slate-400 transition hover:text-brand"
                       onClick={() => play(item)}
                     >
                       Play
